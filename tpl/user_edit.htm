@@ -1,29 +1,31 @@
+
 <h1>{page_title}</h1>
 <div id="form">
 <!-- START BLOCK : result -->
 	<div class="notification notification-danger"><h4>{messages}</h4></div>
 	<!-- END BLOCK : result -->
-	<form id="userForm" method="POST">
+	<form id="userForm" method="POST"  >
 	<fieldset id="formset" class="formfields">
 		<div>
 			<label for="first_name">First Name:</label>
-			<input id="first_name" type="text" name="first_name" value="{first_name}" />
+			<input id="first_name" type="text" name="first_name" id="first_name"  data-validation="required"  value="{first_name}" />
+			
 		</div>
 		<div>
 			<label for="surname">Surname:</label>
-			<input id="surname" type="text" name="surname" value="{surname}" />
+			<input id="surname" type="text" name="surname" data-validation="required" value="{surname}" />
 		</div>
 		<div>
 			<label for="email">Email:</label>
-			<input id="email" type="text" name="email" value="{email}" />
+			<input id="email" type="text" name="email" data-validation="email" value="{email}" />
 		</div>
 		<div>
 			<label for="username">Username:</label>
-			<input id="username" type="text" name="username" value="{username}" />
+			<input id="username" type="text" name="username" data-validation="required" value="{username}" />
 		</div>
 		<div>
 			<label for="password">Password:</label>
-			<input id="password" type="password" name="password" value="{password}" />
+			<input id="password" type="password" name="password" data-validation="length" data-validation-length="min6" value="{password}" />
 		</div>
 		<div id="buttons">
 			<a href="users.php"><input type="button" value="Cancel" /></a>

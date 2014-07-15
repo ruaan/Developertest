@@ -23,42 +23,42 @@ if (isset($_REQUEST['first_name'])) {
     $formInput['first_name'] = strip_tags(trim($_REQUEST['first_name']));
 } 
 else {
-    $formInput['first_name'] = isset($userInfo) && !empty($userInfo) ? $userInfo['first_name'] : '';
+    $formInput['first_name'] = !empty($userInfo) && isset($userInfo)  ? $userInfo['first_name'] : '';
 }
 
 if (isset($_REQUEST['surname'])) {
     $formInput['surname'] = strip_tags(trim($_REQUEST['surname']));
 } 
 else {
-    $formInput['surname'] = isset($userInfo) && !empty($userInfo) ? $userInfo['surname'] : '';
+    $formInput['surname'] = !empty($userInfo) && isset($userInfo)  ? $userInfo['surname'] : '';
 }
 
 if (isset($_REQUEST['email'])) {
     $formInput['email'] = strip_tags(trim($_REQUEST['email']));
 } 
 else {
-    $formInput['email'] = isset($userInfo) && !empty($userInfo) ? $userInfo['email'] : '';
+    $formInput['email'] = !empty($userInfo) && isset($userInfo)  ? $userInfo['email'] : '';
 }
 
 if (isset($_REQUEST['username'])) {
     $formInput['username'] = strip_tags(trim($_REQUEST['username']));
 } 
 else {
-    $formInput['username'] = isset($userInfo) && !empty($userInfo) ? $userInfo['username'] : '';
+    $formInput['username'] = !empty($userInfo) && isset($userInfo)  ? $userInfo['username'] : '';
 }
 
 if (isset($_REQUEST['password'])) {
     $formInput['password'] = strip_tags(trim($_REQUEST['password']));
 } 
 else {
-    $formInput['password'] = isset($userInfo) && !empty($userInfo) ? $userInfo['password'] : '';
+    $formInput['password'] = !empty($userInfo) && isset($userInfo)  ? $userInfo['password'] : '';
 }
 
 $tpl->assign($formInput);
 
 if(isset($_REQUEST['submit'])) {
 
-    if(isset($userInfo) && !empty($userInfo)) {
+    if(!empty($userInfo) && isset($userInfo) ) {
 
         $sql = 'UPDATE users SET first_name = \'' . mysql_real_escape_string($formInput['first_name']) . '\', surname = \'' . mysql_real_escape_string($formInput['surname']) . '\', email = \'' . mysql_real_escape_string($formInput['email']) . '\', username = \'' . mysql_real_escape_string($formInput['username']) . '\', password = \'' . mysql_real_escape_string($formInput['password']) . '\' WHERE id = ' . (int) $_GET['id'];
     } else {

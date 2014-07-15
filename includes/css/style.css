@@ -33,4 +33,6 @@ input[type=button],input[type=submit] {
 	padding:3px 25px;
 	
 	height:25px;
-	margin-left:3px}
+	margin-left:3px
+	}
+	.form-error {color:red;}
