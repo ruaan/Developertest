@@ -1,0 +1,41 @@
+<h1>{page_title}</h1>
+<table id="datatable" class="display" border="0" cellspacing="0" cellpadding="0">
+<thead>
+	<tr>
+		<th>ID</th>
+		<th>First Name</th>
+		<th>Surname</th>
+		<th>Email</th>
+		<th>Username</th>
+		<th>&nbsp;</th>
+	</tr>
+		</thead>
+		<tfoot>
+	<tr>
+		<th>ID</th>
+		<th>First Name</th>
+		<th>Surname</th>
+		<th>Email</th>
+		<th>Username</th>
+		<th>&nbsp;</th>
+	</tr>
+		</tfoot>
+	<!-- START BLOCK : user -->
+	<tbody>
+	<tr>
+		<td>{id}</td>
+		<td>{first_name}</td>
+		<td>{surname}</td>
+		<td>{email}</td>
+		<td>{username}</td>
+		<td>[ <a href="user.edit.php?id={id}">edit</a> ]</td>
+	</tr>
+	</tbody>
+	<!-- END BLOCK : user -->
+</table>
+<script>
+$(document).ready(function() {
+	$('#datatable').dataTable();
+} );
+
+</script>

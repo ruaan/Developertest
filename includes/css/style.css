@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+body {font-weight:100 !important;}
+h1 {font-weight:100 !important;}
+hr {border : 0;
+       height : 1px;
+       background-color:silver;
+       margin : 1em 0;}
+footer p {float:right;}
+#form {width:350px;margin:0px auto;}
+#formset {border:5px solid silver;padding:20px;}
+#innerwrapper {border:6px solid silver;padding:20px;}
+.formfields label, .formfields input {
+  display:inline-block;
+  margin: 5px 0;
+
+}
+.formfields input {
+  -moz-border-radius: 5px 1px;
+border-radius: 5px 4px;
+border:1px solid grey;
+width:205px;
+height:18px;
+
+}
+#buttons {margin-left:82px;margin-top:10px;}
+.formfields label {
+  width:80px !important; 
+  font-weight:100;
+  font-style:normal;
+}
+input[type=button],input[type=submit] {
+	width:100px !important;
+	padding:3px 25px;
+	
+	height:25px;
+	margin-left:3px}
